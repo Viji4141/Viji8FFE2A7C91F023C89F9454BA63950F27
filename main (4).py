@@ -1,12 +1,14 @@
-def factorial(x):
-    """This is a recursive function
-    to find the factorial of an integer"""
+def linearSearchProduct(productList, targetProduct):
+  indices = []
 
-    if x == 1:
-        return 1
-    else:
-        return (x * factorial(x-1))
+  for index,product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
 
+  return indices
 
-num = 3
-print("The factorial of", num, "is", factorial(num))
+products = ["shoes","boot","loafer","shoes","sandal","shoes"]
+target = "shoes"
+target2 = "apple"
+result = linearSearchProduct(products , target)
+print(result)
